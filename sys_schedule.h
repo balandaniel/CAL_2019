@@ -7,6 +7,7 @@
 
 #ifndef SYS_SCHEDULE_H
 #define	SYS_SCHEDULE_H
+#include "light_sig.h"
 
 void TASK_vSchedule(void);
 

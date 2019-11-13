@@ -7,7 +7,7 @@
 
 #ifndef SYS_TASKS_H
 #define	SYS_TASKS_H
-
+#include "light_sig.h"
 
 void TASK_Inits(void);
 
