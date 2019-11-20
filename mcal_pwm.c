@@ -4,7 +4,7 @@
 /*******************************************************************************
 *  Function name    : PWM1_vInit
 *  Description      : 1)Initializes the PWM1 Module . Channels 1 and 2  are
-*                       used ,3 is not used but is initialized .                   
+*                       used, 3 is not used but is initialized.                   
 *  List of arguments: no arguments
 *  Return value     : no return value
 ********************************************************************************/

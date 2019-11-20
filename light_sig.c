@@ -1,5 +1,5 @@
-#include "light_sig.h"
 #include "general.h"
+#include "light_sig.h"
 
 int counter = 0;
 
