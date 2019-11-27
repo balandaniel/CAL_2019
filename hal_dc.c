@@ -5,7 +5,7 @@
 void Hal_vDcMotInit()
 {
     PWM1_vInit();
-    //GPIO_u8SetPortPin(PORT_A, 9, DIGITAL, OUTPUT);
+    GPIO_u8SetPortPin(PORT_A, 9, DIGITAL, OUTPUT);
 }
 
 void Hal_vSetDcMotDir(T_U8 dir)

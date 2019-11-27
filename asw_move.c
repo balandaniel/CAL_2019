@@ -10,26 +10,12 @@ void Asw_vMoveInit()
 
 void Asw_vMove()
 {
-    /*T_U16 counter = 0;
-    if(counter < 50)
+    RTE_vSetDcMotDir(0);
+    //RTE_vSetDcMotSpeed(10);
+    RTE_SetServoAngle(130);
+    /*T_F16 counter;
+    for (counter = 60; counter <= 130; counter++)
     {
-        if(counter < 10)
-        {
-            RTE_vSetDcMotDir(0);
-            RTE_vSetDcMotSpeed(20);
-        }
-        else
-        {
-            RTE_vSetDcMotDir(0);
-            RTE_vSetDcMotSpeed(80);
-        }
-    }
-    else
-    {
-        RTE_vSetDcMotSpeed(0);
-        counter = 0;
-    }
-    counter++;*/
-    RTE_vSetDcMotDir(1);
-    RTE_vSetDcMotSpeed(30);
+        RTE_SetServoAngle(counter);
+    }*/
 }
