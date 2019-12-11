@@ -11,11 +11,36 @@ void Asw_vMoveInit()
 void Asw_vMove()
 {
     RTE_vSetDcMotDir(0);
-    //RTE_vSetDcMotSpeed(10);
-    RTE_SetServoAngle(130);
-    /*T_F16 counter;
-    for (counter = 60; counter <= 130; counter++)
+    RTE_vSetDcMotSpeed(20);
+    //RTE_vSetServoAngle(130);
+}
+
+void Asw_vMoveLineFollower()
+{
+    RTE_vSetDcMotDir(0);
+    RTE_vSetServoAngle(100);
+    T_U16 lf = RTE_u16GetLineFollower();
+    if (lf == 63) //cei 6 pini sunt 111111(negru)
     {
-        RTE_SetServoAngle(counter);
+        RTE_vSetDcMotSpeed(0);
+    }
+    else
+    {
+        RTE_vSetDcMotSpeed(40);
+    }
+    
+    /*if (lf == 63)
+    {
+        RTE_vSetDcMotSpeed(0);
+    }
+    else if (lf <= 62) //11110
+    {
+        RTE_vSetDcMotSpeed(20);
+        RTE_vSetServoAngle(85);
+    }
+    else if (lf >= 31) //011111
+    {
+        RTE_vSetDcMotSpeed(20);
+        RTE_vSetServoAngle(95);
     }*/
 }

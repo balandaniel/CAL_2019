@@ -2,23 +2,23 @@
 #include "mcal_pwm.h"
 #include "hal_servo.h"
 
-#define rezolutie 0.04375
+#define rezolutie 0.117
 
-void Hal_ServoInit()
+void Hal_vServoInit()
 {
     PWM1_vInit();
 }
 
-void Hal_SetServoAngle(T_F16 angle) 
+void Hal_vSetServoAngle(T_F16 angle) 
 {
-    T_F16 dutyCycle = (angle - 10) * rezolutie + 4;
-    if (dutyCycle < 6.15)
+    if (angle < 65)
     {
-        dutyCycle = 6.15;
+        angle = 65;
     }
-    if (dutyCycle > 8.81)
+    if (angle > 115)
     {
-        dutyCycle = 8.81;
+        angle = 115;
     }
+    T_F16 dutyCycle = (angle - 65) * rezolutie + 4;
     PWM1_vSetDuty(dutyCycle, 1);
 }

@@ -6,4 +6,5 @@ general.h  \
  general_types.h  \
 mcal_gpio.h  \
 hal_servo.h  \
+hal_lf.h  \
 asw_move.h 

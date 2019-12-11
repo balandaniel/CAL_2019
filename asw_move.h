@@ -6,5 +6,6 @@
 
 extern void Asw_vMoveInit();
 extern void Asw_vMove();
+extern void Asw_vMoveLineFollower();
 
 #endif	/* ASW_MOVE_H */

@@ -17,4 +17,5 @@ asw_com.h  \
 asw_move.h  \
 rte.h  \
 hal_dc.h  \
- hal_servo.h 
+ hal_servo.h  \
+hal_lf.h 

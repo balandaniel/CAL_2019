@@ -37,16 +37,8 @@ void TASK_10ms()
 }
 
 void TASK_100ms()
-{ 
-    /*if(a == 1)
-    {
-        vDoHandleLightSig();
-        a = 0;
-    }
-    else
-    {
-        a++;
-    }*/
+{
+    Asw_vMoveLineFollower();
 }
 
 void TASK_500ms()
@@ -56,5 +48,5 @@ void TASK_500ms()
 
 void TASK_1000ms()
 {
-    Asw_vMove();
+    //Asw_vMove();
 }
