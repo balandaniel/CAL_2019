@@ -38,7 +38,10 @@ void TASK_10ms()
 
 void TASK_100ms()
 {
-    Asw_vMoveLineFollower();
+    Hal_vSetDcMotSpeed(20);
+    Asw_vDoHandleLightSigBattery();
+    //Asw_vMoveLineFollower();
+    //Asw_vMove();
 }
 
 void TASK_500ms()

@@ -7,4 +7,6 @@ general.h  \
 mcal_gpio.h  \
 hal_servo.h  \
 hal_lf.h  \
+hal_battery.h  \
+ mcal_adc.h  \
 asw_move.h 

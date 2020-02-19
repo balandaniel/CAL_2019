@@ -13,6 +13,7 @@ void Asw_vMove()
     RTE_vSetDcMotDir(0);
     RTE_vSetDcMotSpeed(20);
     //RTE_vSetServoAngle(130);
+    //RTE_f16GetBatteryValue();
 }
 
 void Asw_vMoveLineFollower()
