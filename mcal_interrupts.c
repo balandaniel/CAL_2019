@@ -5,6 +5,8 @@
 #define NEG_EDGE 1
 #define POS_EDGE 0
 
+extern BOOL flag = 0;  //declar flag ce detecteaza intreruperea
+
 /* RF Interrupt Request Flag, set in INT2 by the nRF24L01 module*/
 extern BOOL bRF_IRQ;
 
@@ -14,6 +16,17 @@ extern BOOL bRF_IRQ;
 void __attribute__((__interrupt__, no_auto_psv)) _INT0Interrupt(void)
 {
     /* Write the code to detect obstacle */
+    IFS0bits.INT0IF = 0;
+    if(int_vINT0GetPolarity() == 0)
+    {
+        flag = 1;
+        int_bINT0SetPolarity(1);
+    }
+    else
+    {
+        flag = 0;
+        int_bINT0SetPolarity(0);
+    }
 }
 
 
@@ -137,3 +150,12 @@ void INT2_vInit(T_U8 u8Priority)
 
 
 
+BOOL int_vINT0GetPolarity()
+{
+    return INTCON2bits.INT0EP;
+}
+
+void int_bINT0SetPolarity(BOOL bPolarity)
+{
+    bPolarity = NEG_EDGE;
+}

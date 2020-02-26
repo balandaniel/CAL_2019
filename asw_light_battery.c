@@ -1,4 +1,5 @@
 #include "xc.h"
+#include "hal_battery.h"
 #include "asw_light_battery.h"
 
 int i = 0;
@@ -19,5 +20,10 @@ void Asw_vDoHandleLightSigBattery()
                 GPIO_u8WritePortPin(PORT_A, 10, 0);
             }
         }
+        else
+        {
+            i = 0;
+        }
+        i++;
     }
 }

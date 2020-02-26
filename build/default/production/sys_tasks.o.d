@@ -19,4 +19,5 @@ rte.h  \
 hal_dc.h  \
  hal_servo.h  \
 hal_lf.h  \
-hal_battery.h 
+hal_battery.h  \
+hal_interrupt.h 
